@@ -105,7 +105,7 @@ const Home = () => {
                                 </Box>
                             </AnimatedComponent>
                             <AnimatedComponent>
-                                <Box className="svg-image" w="46px" h="46px" bgColor="#F6F6F6" borderRadius="8px" alignContent="center" px="13px"
+                                <Box className="svg-image" w="46px" h="46px" bgColor="#F6F6F6" borderRadius="8px" py='13px' px="13px"
                                         _hover={{bgColor: "#e4e4e4"}}>
                                         <Image src="/menu-icon.svg" width={19.8} height={18} />
                                     </Box>
@@ -314,12 +314,12 @@ const Home = () => {
                         <Box position="absolute" top="30px" right="30px">
                             <Box display="flex" columnGap="8px">
                                 <AnimatedComponent>
-                                    <Box className="def-animation-delay" w="46px" h="46px" borderRadius="8px" border="1px solid #FFFFFF"alignContent="center" px="13px" _hover={{bgColor: "#64646452",borderColor: "transparent",}}>
+                                    <Box className="def-animation-delay" w="46px" h="46px" borderRadius="8px" border="1px solid #FFFFFF" py='13px' px="13px" _hover={{bgColor: "#64646452",borderColor: "transparent",}}>
                                         <Image src="/heart-icon.svg" width={19.8} height={18}/>
                                     </Box>
                                 </AnimatedComponent>
                                 <AnimatedComponent>
-                                    <Box className="def-animation-delay" w="46px" h="46px" bgColor="#F6F6F6" borderRadius="8px" alignContent="center" px="13px" _hover={{bgColor: "#64646452",borderColor: "transparent",}}>
+                                    <Box className="def-animation-delay" w="46px" h="46px" bgColor="#F6F6F6" borderRadius="8px" py='13px' px="13px" _hover={{bgColor: "#64646452",borderColor: "transparent",}}>
                                         <Image src="/home-icon.svg" width={19.8} height={18}/>
                                     </Box>
                                 </AnimatedComponent>
@@ -354,14 +354,14 @@ const Home = () => {
                                                 h="28px"
                                                 borderRadius="50%"
                                                 bgColor="#F6F6F6"
-                                                alignContent="center"
+                                                pt='6px'
                                                 px="6px"
                                                 _hover={{bgColor: "#e4e4e4"}}
                                             >
                                                 <Image
                                                     src="/download-icon.svg"
-                                                    width={14}
-                                                    height={14}
+                                                    width={'16px'}
+                                                    height={'16px'}
                                                 />
                                             </Box>
                                         </Box>

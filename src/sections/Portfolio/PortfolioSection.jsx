@@ -111,7 +111,7 @@ function PortfolioSection() {
                         >
                             <Box
                                 width="33.333%"
-                                alignContent="center"
+                                pt='10px'
                                 textAlign="center"
                                 borderRadius="8px"
                                 cursor="pointer"
@@ -130,7 +130,7 @@ function PortfolioSection() {
                             </Box>
                             <Box
                                 width="33.333%"
-                                alignContent="center"
+                                pt='10px'
                                 textAlign="center"
                                 borderRadius="8px"
                                 cursor="pointer"
@@ -149,7 +149,7 @@ function PortfolioSection() {
                             </Box>
                             <Box
                                 width="33.333%"
-                                alignContent="center"
+                                pt='10px'
                                 textAlign="center"
                                 borderRadius="8px"
                                 cursor="pointer"

@@ -18,7 +18,7 @@ function ApartmentsPortfolio() {
                 columnGap="40px"
                 rowGap="20px"
             >
-                <Box className={styles["main_block"]} position="relative" width={{lg: "50%"}} mx="auto" overflow="hidden">
+                <Box  position="relative" width={{lg: "50%"}} mx="auto" overflow="hidden">
                     <Image src="portfolio-images/port-image-1.svg" height="100%" />
                     <Box className={styles["nested_text"]} position="absolute" top={'auto'} bottom={{base: "15px", lg: "40px"}} left={{base: "15px", lg: "40px"}} textAlign="left" transition="all 0.6s">
                         <AnimationText
