@@ -6,6 +6,7 @@ import {
     Link,
     Text,
     useBreakpointValue,
+    useMediaQuery,
 } from "@chakra-ui/react"
 import {useGSAP} from "@gsap/react"
 import {gsap} from "gsap"
@@ -24,6 +25,7 @@ const Home = () => {
     //     "/images/home/main-image-2.svg",
     //     "/images/home/main-image-3.svg",
     // ]
+    const [isSmallScreen] = useMediaQuery('(max-width: 768px)');
 
     const [isMobile, setMobile] = useState(false)
     const isMob = useBreakpointValue({base: true, lg: false})
@@ -77,7 +79,7 @@ const Home = () => {
                 h="100%"
                 mx="auto"
                 display="flex"
-                flexDirection={{base: "column", lg: "row"}}
+                flexDirection={isSmallScreen ? 'column' : 'row'}
                 p={{base: "20px 15px 15px 15px", lg: "10px 10px 10px 40px"}}
             >
                 <Grid
@@ -96,79 +98,18 @@ const Home = () => {
                                 <Image src="/images/home/logotype-icon.svg" width={{base: "86px", md: "128.33px"}} height={{base: "30px", md: "44px"}}/>
                             </AnimatedComponent>
                         </Box>
-                        <Box
-                            position="absolute"
-                            top={0}
-                            right={0}
-                            display="flex"
-                            columnGap="8px"
-                        >
-                            <SepecialAnimationComponents
-                                delay={1}
-                                animationFrom={{
-                                    y: "50px",
-                                    autoAlpha: 0,
-                                    scale: 0.5,
-                                }}
-                                animationTo={{
-                                    y: 0,
-                                    autoAlpha: 1,
-                                    scale: 1,
-                                    duration: 1.5,
-                                    ease: "power3.out",
-                                }}
-                                Component={() => (
-                                    <Box
-                                        className="svg-image"
-                                        w="46px"
-                                        h="46px"
-                                        bgColor="#F6F6F6"
-                                        borderRadius="8px"
-                                        alignContent="center"
-                                        px="13px"
-                                        _hover={{bgColor: "#e4e4e4"}}
-                                    >
-                                        <Image
-                                            src="/map-icon.svg"
-                                            width={19.8}
-                                            height={18}
-                                        />
+                        <Box position="absolute" top={0} right={0} display="flex" columnGap="8px">
+                            <AnimatedComponent>
+                                <Box className="svg-image" w="46px" h="46px" bgColor="#F6F6F6" borderRadius="8px" alignContent="center" px="13px" _hover={{bgColor: "#e4e4e4"}}>
+                                    <Image src="/map-icon.svg" width={'19.8px'} height={'18px'}/>
+                                </Box>
+                            </AnimatedComponent>
+                            <AnimatedComponent>
+                                <Box className="svg-image" w="46px" h="46px" bgColor="#F6F6F6" borderRadius="8px" alignContent="center" px="13px"
+                                        _hover={{bgColor: "#e4e4e4"}}>
+                                        <Image src="/menu-icon.svg" width={19.8} height={18} />
                                     </Box>
-                                )}
-                            />
-                            <SepecialAnimationComponents
-                                delay={1}
-                                animationFrom={{
-                                    y: "50px",
-                                    autoAlpha: 0,
-                                    scale: 0.5,
-                                }}
-                                animationTo={{
-                                    y: 0,
-                                    autoAlpha: 1,
-                                    scale: 1,
-                                    duration: 1.5,
-                                    ease: "power3.out",
-                                }}
-                                Component={() => (
-                                    <Box
-                                        className="svg-image"
-                                        w="46px"
-                                        h="46px"
-                                        bgColor="#F6F6F6"
-                                        borderRadius="8px"
-                                        alignContent="center"
-                                        px="13px"
-                                        _hover={{bgColor: "#e4e4e4"}}
-                                    >
-                                        <Image
-                                            src="/menu-icon.svg"
-                                            width={19.8}
-                                            height={18}
-                                        />
-                                    </Box>
-                                )}
-                            />
+                            </AnimatedComponent>
                         </Box>
                         {isMobile ? (
                             <Box
