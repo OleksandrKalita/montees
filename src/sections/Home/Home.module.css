@@ -1,0 +1,8 @@
+.anim_text {
+    display: block;
+}
+@media (max-width: 1360px) {
+    .anim_text {
+        display: none;
+    }
+}
