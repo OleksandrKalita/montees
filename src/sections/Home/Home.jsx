@@ -100,7 +100,7 @@ const Home = () => {
                         </Box>
                         <Box position="absolute" top={0} right={0} display="flex" columnGap="8px">
                             <AnimatedComponent>
-                                <Box className="svg-image" w="46px" h="46px" bgColor="#F6F6F6" borderRadius="8px" alignContent="center" px="13px" _hover={{bgColor: "#e4e4e4"}}>
+                                <Box className="svg-image" w="46px" h="46px" bgColor="#F6F6F6" borderRadius="8px" py='13px'  px="13px" _hover={{bgColor: "#e4e4e4"}}>
                                     <Image src="/map-icon.svg" width={'19.8px'} height={'18px'}/>
                                 </Box>
                             </AnimatedComponent>
