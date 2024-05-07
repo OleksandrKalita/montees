@@ -1,8 +1,9 @@
-import {Box, Grid, Image, Text} from "@chakra-ui/react"
+import {Box, Grid, Image, Text, useMediaQuery} from "@chakra-ui/react"
 
 import AnimationText from "@/components/AnimationText/AnimationText"
-
+import styles from "./Portfolio.module.css"
 function RentPortfolio() {
+    const [isSmallScreen] = useMediaQuery('(max-width: 768px)');
     return (
         <Box
             pt={{base: "0px", lg: "40px"}}
@@ -10,14 +11,32 @@ function RentPortfolio() {
             flexDirection="column"
             rowGap={{base: "20px", lg: "40px"}}
         >
-            <Grid
-                w="100%"
-                display="flex"
-                flexDirection={{base: "column", lg: "row"}}
-                columnGap="40px"
-                rowGap="20px"
-            >
-                <Box
+            <Grid w="100%" display="flex" flexDirection={{base: "column", lg: "row"}} columnGap="40px" rowGap="20px">
+            
+                <Box position="relative" width={{lg: "50%"}} mx="auto" overflow="hidden">
+                    <Image src="portfolio-images/port-image-1.svg" height="100%"/>
+                    <Box
+                        position="absolute"
+                        top={{base: "15px", lg: "40px"}}
+                        right={{base: "15px", lg: "40px"}}
+                        boxSize="52px"
+                        borderRadius="50%"
+                        bgColor="#fff"
+                        textAlign="center">
+                        <Image alt="arrow-icon" src="/arrow-icon.svg"
+                            width="38px"
+                            height="38px"
+                            mt="16px"
+                            ml="6px"
+                            transition="all 0.4s"
+                            _hover={{
+                                transform: "translateX(3px) translateY(-3px)",
+                            }}
+                        />
+                    </Box>
+                </Box>
+
+                {/* <Box
                     position="relative"
                     width={{lg: "50%"}}
                     mx="auto"
@@ -163,7 +182,7 @@ function RentPortfolio() {
                             </Text>
                         </Box>
                     </Box>
-                </Box>
+                </Box> */}
 
                 <Box position="relative" width={{lg: "50%"}} mx="auto">
                     <Image

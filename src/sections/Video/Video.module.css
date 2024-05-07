@@ -18,13 +18,13 @@
 
 .button_con {
     position: relative;
-    top: 20%;
+    top: 10%;
     left: 50%;
     translate: -50%;
 
     display: flex;
     width: max-content;
-    padding-top: 80px;
+    /* padding-top: 80px; */
     column-gap: 12px;
     transition: all 1s;
 }
@@ -78,10 +78,11 @@
         position: relative;
         width: 80%;
         /* height: 537px; */
-        height: 80%;
+        height: 60%;
     }
     .container {
-        height: 550px;
+        /* height: 700px; */
+        height: 545px;
     }
     .marquee_text {
         font-size: 36px;
