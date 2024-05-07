@@ -1,4 +1,4 @@
-import {Box, Image,} from "@chakra-ui/react"
+import {Box, Image, useMediaQuery,} from "@chakra-ui/react"
 import React, { useEffect, useRef} from "react"
 import Marquee from "react-fast-marquee"
 
@@ -9,6 +9,8 @@ import gsap from "gsap"
 
 
  export default function VideoSection() {
+    const [isSmallScreen] = useMediaQuery('(max-width: 768px)');
+
     const refRoot = useRef(null)
     const refVideoBox = useRef(null)
     const refVideo = useRef(null)
@@ -52,7 +54,7 @@ import gsap from "gsap"
           },
           animation: tl
         })
-      })
+      }, [isSmallScreen])
 
       return () => ctx.revert()
     })
@@ -95,34 +97,12 @@ import gsap from "gsap"
                     >
                         <source src="/video/v-1.mp4" />
                     </video>
-                    <Marquee
-                    className={styles.video_marquee}
-                        style={{
-                            zIndex: 2,
-                        }}
-                        speed={150}
-                    >
-                        <div className={styles.marquee_text}>
-                            Apartments with an initial payment from $25,000
-                        </div>
-                        <div className={styles.marquee_text}>
-                            <Box
-                                boxSize="18px"
-                                bgColor="#fff"
-                                borderRadius="50%"
-                            ></Box>
-                        </div>
+                    <Marquee style={{position: 'absolute',top: '45%', zIndex: 2}} speed={150}>
+                        <div className={styles.marquee_text}>Apartments with an initial payment from $25,000</div>
+                        <div className={styles.marquee_text}><Box boxSize='18px' bgColor='#fff' borderRadius='50%'></Box></div>
                         <div className={styles.marquee_text}>interest-free</div>
-                        <div className={styles.marquee_text}>
-                            <Box
-                                boxSize="18px"
-                                bgColor="#fff"
-                                borderRadius="50%"
-                            ></Box>
-                        </div>
-                        <div className={styles.marquee_text}>
-                            installment plan up to 8 years
-                        </div>
+                        <div className={styles.marquee_text}><Box boxSize='18px' bgColor='#fff' borderRadius='50%'></Box></div>
+                        <div className={styles.marquee_text}>installment plan up to 8 years</div>
                     </Marquee>
                 </div>
             </div>

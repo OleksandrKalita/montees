@@ -48,11 +48,11 @@
     object-fit: cover;
 }
 
-.video_marquee {
+/* .video_marquee {
     position: absolute;
     top: 50%;
     translate: 0 -50%;
-}
+} */
 
 .marquee_text {
     font-size: 56px;
@@ -67,18 +67,22 @@
 @media (max-width: 792px) {
     .wrapper {
         height: 735px;
+        /* height: 470px; */
         width: 100vw;
         background-color: #f8f5f2;
-        padding-left: 15px;
-        padding-right: 15px;
+        /* padding-left: 15px;
+        padding-right: 15px; */
     }
 
     .video_wrapper {
         position: relative;
-        width: 100%;
-        height: 537px;
+        width: 80%;
+        /* height: 537px; */
+        height: 80%;
     }
-
+    .container {
+        height: 550px;
+    }
     .marquee_text {
         font-size: 36px;
     }
