@@ -17,8 +17,8 @@ function RentPortfolio() {
                     <Image src="portfolio-images/port-image-1.svg" height="100%"/>
                     <Box
                         position="absolute"
-                        top={{base: "15px", lg: "40px"}}
-                        right={{base: "15px", lg: "40px"}}
+                        top={isSmallScreen ? "15px" :  "40px"}
+                        right={isSmallScreen ? "15px" : "40px"}
                         boxSize="52px"
                         borderRadius="50%"
                         bgColor="#fff"
