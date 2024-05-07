@@ -11,14 +11,14 @@ function RentPortfolio() {
             flexDirection="column"
             rowGap={{base: "20px", lg: "40px"}}
         >
-            <Grid w="100%" display="flex" flexDirection={{base: "column", lg: "row"}} columnGap="40px" rowGap="20px">
+            <Grid w="100%" display="flex" flexDirection={isSmallScreen ? "column" : "row"} columnGap="40px" rowGap="20px">
             
                 <Box position="relative" width={isSmallScreen ? "100%" : "50%"} mx="auto" overflow="hidden">
                     <Image src="portfolio-images/port-image-1.svg" height="100%"/>
                     <Box
                         position="absolute"
-                        top={isSmallScreen ? "15px" :  "40px"}
-                        right={isSmallScreen ? "15px" : "40px"}
+                        top={isSmallScreen ? 15 : 40}
+                        right={isSmallScreen ? 15 : 40}
                         boxSize="52px"
                         borderRadius="50%"
                         bgColor="#fff"
