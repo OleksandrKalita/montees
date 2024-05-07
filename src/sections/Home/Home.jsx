@@ -165,22 +165,8 @@ const Home = () => {
                                 mx="auto"
                                 pt="20px"
                             >
-                                <SepecialAnimationComponents
-                                    delay={1}
-                                    animationFrom={{
-                                        x: 0,
-                                        autoAlpha: 0,
-                                        scale: 1,
-                                    }}
-                                    animationTo={{
-                                        x: 0,
-                                        autoAlpha: 1,
-                                        scale: 1,
-                                        duration: 1.5,
-                                        ease: "power3.out",
-                                    }}
-                                    Component={() => (
-                                        <Box
+                                <AnimatedComponent>
+                                <Box
                                             h="45px"
                                             bgColor="#141414"
                                             borderRadius="80px"
@@ -215,8 +201,7 @@ const Home = () => {
                                                 Contact Us Now
                                             </Text>
                                         </Box>
-                                    )}
-                                />
+                                </AnimatedComponent>
                             </Box>
                         ) : (
                             <Box position="absolute" bottom={0} left={0} mx={{base: "auto"}}>

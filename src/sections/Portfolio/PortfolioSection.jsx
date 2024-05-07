@@ -210,7 +210,7 @@ function PortfolioSection() {
                                     boxSize="45px"
                                     bgColor="#393939"
                                     borderRadius="8px"
-                                    alignContent="center"
+                                    py='14px'
                                     transition="all 0.4s"
                                     _hover={{bgColor: "#4d4c4c"}}
                                 >
@@ -222,7 +222,7 @@ function PortfolioSection() {
                                     boxSize="45px"
                                     bgColor="#393939"
                                     borderRadius="8px"
-                                    alignContent="center"
+                                    py='13px'
                                     transition="all 0.4s"
                                     _hover={{bgColor: "#4d4c4c"}}
                                 >
@@ -234,7 +234,7 @@ function PortfolioSection() {
                                     boxSize="45px"
                                     bgColor="#393939"
                                     borderRadius="8px"
-                                    alignContent="center"
+                                    py="12px"
                                     transition="all 0.4s"
                                     _hover={{bgColor: "#4d4c4c"}}
                                 >

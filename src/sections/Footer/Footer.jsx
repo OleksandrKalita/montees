@@ -11,6 +11,7 @@ import {useEffect, useState} from "react"
 import AnimationText from "@/components/AnimationText/AnimationText"
 import MultiLineTextAnimation from "@/components/MultilineTextAnimation/MultilineTextAnimation"
 import SepecialAnimationComponents from "@/components/SepecialAnimationComponents/SepecialAnimationComponents"
+import AnimatedComponent from "@/components/AnimatedComponent/AnimatedComponent"
 
 function Footer() {
     const [isMobile, setMobile] = useState(false)
@@ -116,32 +117,19 @@ function Footer() {
                         rowGap="70px"
                     >
                         <Box>
-                            <SepecialAnimationComponents
-                                animationFrom={{x: 0, autoAlpha: 0, scale: 0.5}}
-                                animationTo={{
-                                    x: 0,
-                                    autoAlpha: 1,
-                                    scale: 1,
-                                    duration: 1.5,
-                                    ease: "power3.out",
-                                }}
-                                Component={() => (
-                                    <Image
-                                        className="svg-image"
-                                        src="/images/home/logotype-icon.svg"
-                                        width="169px"
-                                        height="58px"
-                                        mb="25px"
-                                    />
-                                )}
-                            />
-                            <AnimationText
-                                style={{
-                                    fontSize: "16px",
-                                    color: "rgba(0,0,0,0.8)",
-                                }}
-                                lines={["Building Your Dreams In Real Estate"]}
-                            />
+                            <AnimatedComponent>
+                                <Image
+                                    className="svg-image"
+                                    src="/images/home/logotype-icon.svg"
+                                    width="169px"
+                                    height="58px"
+                                    mb="25px"/>
+                            </AnimatedComponent>
+                            <AnimatedComponent>
+                                <Text fontSize="16px" color='rgba(0,0,0,0.8)'>
+                                    Building Your Dreams In Real Estate
+                                </Text>
+                            </AnimatedComponent>
                         </Box>
 
                         <Box display="flex" flexDirection="column" w="346px">
@@ -193,40 +181,39 @@ function Footer() {
                             <Text fontSize="16px" color="rgba(0,0,0,0.8)">
                                 Quick Navigation
                             </Text>
-                            <Box
-                                display="flex"
-                                flexDirection="column"
-                                rowGap="32px"
-                                pt="40px"
-                            >
-                                <Text
-                                    fontSize="18px"
-                                    color="rgb(0,0,0)"
-                                    maxW="max-content"
-                                >
-                                    Home
+                            <Box display="flex" flexDirection="column" rowGap="32px" pt="40px">
+                                <AnimatedComponent>
+                                    <Text fontSize="18px" color="rgb(0,0,0)" maxW="max-content">
+                                        Home
+                                    </Text>
+                                </AnimatedComponent>
+                                <AnimatedComponent>
+                                    <Text
+                                        fontSize="18px"
+                                        color="rgb(0,0,0)"
+                                        maxW="max-content"
+                                    >
+                                        Our Properties
+                                    </Text>
+                                </AnimatedComponent>
+                                <AnimatedComponent>
+                                    <Text
+                                        fontSize="18px"
+                                        color="rgb(0,0,0)"
+                                        maxW="max-content"
+                                    >
+                                        Our Advantages
                                 </Text>
-                                <Text
-                                    fontSize="18px"
-                                    color="rgb(0,0,0)"
-                                    maxW="max-content"
-                                >
-                                    Our Properties
-                                </Text>
-                                <Text
-                                    fontSize="18px"
-                                    color="rgb(0,0,0)"
-                                    maxW="max-content"
-                                >
-                                    Our Advantages
-                                </Text>
-                                <Text
-                                    fontSize="18px"
-                                    color="rgb(0,0,0)"
-                                    maxW="max-content"
-                                >
-                                    Our Services
-                                </Text>
+                                </AnimatedComponent>
+                                <AnimatedComponent>
+                                    <Text
+                                        fontSize="18px"
+                                        color="rgb(0,0,0)"
+                                        maxW="max-content"
+                                    >
+                                        Our Services
+                                    </Text>
+                                </AnimatedComponent>
                             </Box>
                         </Box>
 

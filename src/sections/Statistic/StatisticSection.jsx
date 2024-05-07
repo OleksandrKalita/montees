@@ -185,23 +185,8 @@ function StatisticSection() {
                                 )}
                             />
                             <Box position="absolute" top="0" right="0" p="20px">
-                                <SepecialAnimationComponents
-                                    delay={0.8}
-                                    animationFrom={{
-                                        x: "-200%",
-                                        autoAlpha: 0,
-                                        scale: 0.5,
-                                    }}
-                                    animationTo={{
-                                        x: 0,
-                                        autoAlpha: 1,
-                                        scale: 1,
-                                        duration: 1.5,
-                                        ease: "power3.out",
-                                    }}
-                                    Component={() => (
-                                        <Box
-                                            h="40px"
+                                <AnimatedComponent delay={0.5}>
+                                    <Box h="40px"
                                             bgColor="#D5E7EE"
                                             borderRadius="80px"
                                             py="3px"
@@ -235,25 +220,10 @@ function StatisticSection() {
                                                 Contact Us Now
                                             </Text>
                                         </Box>
-                                    )}
-                                />
+                                </AnimatedComponent>
                             </Box>
-                            <SepecialAnimationComponents
-                                delay={0.8}
-                                animationFrom={{
-                                    y: "200%",
-                                    autoAlpha: 0,
-                                    scale: 0.5,
-                                }}
-                                animationTo={{
-                                    y: 0,
-                                    autoAlpha: 1,
-                                    scale: 1,
-                                    duration: 1.5,
-                                    ease: "power3.out",
-                                }}
-                                Component={() => (
-                                    <Box
+                            <AnimatedComponent>
+                            <Box
                                         position="absolute"
                                         right="0"
                                         bottom="0"
@@ -310,8 +280,7 @@ function StatisticSection() {
                                             </Box>
                                         </Box>
                                     </Box>
-                                )}
-                            />
+                            </AnimatedComponent>
                         </Box>
                     </Grid>
                     <Box>
@@ -422,7 +391,7 @@ function StatisticSection() {
                                 bottom="0"
                                 p="20px"
                             >
-                                <AnimatedComponent>
+                                <AnimatedComponent delay={0.5}>
                                     <Text fontSize="18px" fontWeight="800" color="#fff">
                                         Building your dreams
                                     </Text>

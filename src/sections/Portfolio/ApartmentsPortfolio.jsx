@@ -34,8 +34,8 @@ function ApartmentsPortfolio() {
                     </Box>
                     <Box
                         position="absolute"
-                        top={{base: "15px", lg: "40px"}}
-                        right={{base: "15px", lg: "40px"}}
+                        top={isSmallScreen ? "15px" : "40px"}
+                        right={isSmallScreen ? "15px" :  "40px"}
                         boxSize="52px"
                         borderRadius="50%"
                         bgColor="#fff"
@@ -54,7 +54,6 @@ function ApartmentsPortfolio() {
                         />
                     </Box>
                     <Box
-                        className={styles.nested_block}
                         position="absolute"
                         bottom={{base: "100px", lg: "130px"}}
                         right={{base: "15px", lg: "40px"}}
@@ -86,7 +85,7 @@ function ApartmentsPortfolio() {
                         display="flex"
                         columnGap="4px"
                         textAlign="left"
-                        opacity={0}
+                        // opacity={0}
                     >
                         <Box
                             w="113px"

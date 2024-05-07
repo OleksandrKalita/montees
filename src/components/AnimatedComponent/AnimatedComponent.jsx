@@ -15,7 +15,9 @@ const AnimatedComponent = ({ children, delay = 0 }) => {
       ([entry]) => {
         // Перевірка на вхід у видиму область
         if (entry.isIntersecting) {
-          controls.start('visible');  // Запускаємо анімацію тільки коли елемент видимий
+          if (ref.current) {
+            controls.start('visible');  // Запускаємо анімацію тільки коли елемент видимий
+          }
         } else {
         //   controls.start('hidden');
         }
