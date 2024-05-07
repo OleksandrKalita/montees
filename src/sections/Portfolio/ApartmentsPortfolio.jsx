@@ -19,13 +19,13 @@ function ApartmentsPortfolio() {
                 columnGap="40px"
                 rowGap="20px"
             >
-                <Box position="relative" width={isSmallScreen ? '100%' : "50%"} mx="auto" overflow="hidden">
+                <Box position="relative" width={isSmallScreen ? '100%' : "50%"} height='max-content' mx="auto" overflow="hidden">
                     <Image src="portfolio-images/port-image-1.svg" height="100%" />
                     <Box position="absolute" top='auto' bottom={isSmallScreen ?  "15px" :  "40px"} left={{base: "15px", lg: "40px"}} textAlign="left" transition="all 0.6s">
                         <AnimationText
                             lines={["Azure Heights", "Luxury Residences"]}
                             style={{
-                                fontSize: "22px",
+                                fontSize: isSmallScreen ? "12px" : "22px",
                                 color: "#fff",
                                 fontWeight: "600",
                             }}
