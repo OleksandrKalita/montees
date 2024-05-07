@@ -13,7 +13,7 @@ function RentPortfolio() {
         >
             <Grid w="100%" display="flex" flexDirection={isSmallScreen ? "column" : "row"} columnGap="40px" rowGap="20px">
             
-                <Box position="relative" width={isSmallScreen ? '100%' : "50%"} height='max-content' mx="auto" overflow="hidden"
+                <Box position="relative" width={isSmallScreen ? '350px' : "50%"} height={isSmallScreen ? '370px' :'max-content'} mx="auto" overflow="hidden"
                     >
                     <Image src="portfolio-images/port-image-1.svg" height="100%"/>
                     <Box
